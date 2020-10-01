@@ -1,8 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { UserProfile } from './UserProfile';
 
 function App() {
+
+  const user = {
+    name: 'Test user',
+    username: '@testuser'
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +25,9 @@ function App() {
         >
           Learn React
         </a>
+        <div>
+          <UserProfile user={user} />
+        </div>
       </header>
     </div>
   );
